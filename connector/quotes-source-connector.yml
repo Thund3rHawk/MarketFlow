@@ -1,0 +1,10 @@
+apiVersion: 0.1.0
+meta:
+  version: 0.3.8
+  name: http-quotes
+  type: http-source
+  topic: quotes
+http:
+  endpoint: "http://localhost:4000/" # Endpoint to fetch stock price. Ensure the server is running and accessible.
+  method: GET # HTTP method for the request
+  interval: 3s 
