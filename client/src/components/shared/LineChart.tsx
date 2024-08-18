@@ -71,7 +71,7 @@ export function LinechartChart(props: any) {
               interval={2}
             />
             <ChartTooltip cursor={true} content={<ChartTooltipContent hideLabel />} />
-            <Line dataKey="AAPL" type= 'linear' stroke="var(--color-desktop)" strokeWidth={1} dot={false} stroke = "#8884d8"/>
+            <Line dataKey="AAPL" type= 'linear' strokeWidth={1} dot={false} stroke = "#8884d8"/>
             {/* <Line dataKey="GOOGL" type= 'linear' stroke="var(--color-desktop)" strokeWidth={1} dot={false} stroke = "#82ca9d"/>
             <Line dataKey="AMZN" type= 'linear' stroke="var(--color-desktop)" strokeWidth={1} dot={false} stroke = "#6754d8"/>
             <Line dataKey="MSFT" type= 'linear' stroke="var(--color-desktop)" strokeWidth={1} dot={false} stroke = "#8884a4"/>
