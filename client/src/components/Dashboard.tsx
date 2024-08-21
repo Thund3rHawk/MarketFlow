@@ -4,6 +4,12 @@ import GoogleIcon from '@mui/icons-material/Google';
 import MicrosoftIcon from '@mui/icons-material/Microsoft';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import { useEffect, useState } from "react";
+import appleLogo from '../assets/apple.png'
+import microsoftLogo from '../assets/microsoft.png'
+import amazonLogo from '../assets/amazon.png'
+import googleLogo from '../assets/google.png'
+import binanceLogo from '../assets/binance.png'
+import metaLogo from '../assets/meta.png'
 
 interface data {
     price: string,
@@ -40,7 +46,7 @@ const Dashboard = () => {
                     
                     setAppl ({price: parsedData.data[0].p, vol: parsedData.data[0].v, timestamp: formatTime(parsedData.data[0].t)})
                 }
-                if (parsedData.data[0].s === 'MFST'){
+                if (parsedData.data[0].s === 'MSFT'){
                     setMfst ({price: parsedData.data[0].p, vol: parsedData.data[0].v, timestamp: formatTime(parsedData.data[0].t)})
                 }
                 if (parsedData.data[0].s === 'AMZN'){
@@ -49,10 +55,10 @@ const Dashboard = () => {
                 if (parsedData.data[0].s === 'BINANCE:BTCUSDT'){
                     setBinance ({price: parsedData.data[0].p, vol: parsedData.data[0].v, timestamp: formatTime(parsedData.data[0].t)})
                 }
-                if (parsedData.data[0].s === 'GOOGL'){
+                if (parsedData.data[0].s === 'GOOG'){
                     setGoogl ({price: parsedData.data[0].p, vol: parsedData.data[0].v, timestamp: formatTime(parsedData.data[0].t)})
                 }
-                if (parsedData.data[0].s === 'FB'){
+                if (parsedData.data[0].s === 'META'){
                     setFb ({price: parsedData.data[0].p, vol: parsedData.data[0].v, timestamp: formatTime(parsedData.data[0].t)})
                 }
              
@@ -71,52 +77,52 @@ const Dashboard = () => {
 
   const stocks = [
     {
-      name: "AAPL",
+      name: "Apple (AAPL)",
       price: `${aapl.price}`,
       change: 2.5,
       volume: `${aapl.vol}`,
       timestamp: `${aapl.timestamp}`,
-      icon: <AppleIcon/>
+      icon: appleLogo
     },
     {
-      name: "GOOGL",
+      name: "Google (GOOG)",
       price: `${googl.price}`,
       change: 2.5,
       volume: `${googl.vol}`,
       timestamp: `${googl.timestamp}`,
-      icon: <GoogleIcon/>,
+      icon: googleLogo,
     },
     {
-      name: "MSFT",
+      name: "Microsoft (MSFT)",
       price: `${mfst.price}`,
       change: 2.5,
       volume: `${mfst.vol}`,
       timestamp: `${mfst.timestamp}`,
-      icon: <MicrosoftIcon/>,
+      icon: microsoftLogo,
     },
     {
-      name: "AMZN",
+      name: "Amazon (AMZN)",
       price: `${amzn.price}`,
       change: 2.5,
       volume: `${amzn.vol}`,
       timestamp: `${amzn.timestamp}`,
-      icon: <></>,
+      icon: amazonLogo,
     },
     {
-      name: "BINANCE:BTCUSDT",
+      name: "Binance (BINANCE:BTCUSDT)",
       price: `${binance.price}`,
       change: 2.5,
       volume: `${binance.vol}`,
       timestamp: `${binance.timestamp}`,
-      icon: <></>,
+      icon: binanceLogo,
     },
     {
-      name: "FB",
+      name: "Meta (META)",
       price: `${fb.price}`,
       change: 2.5,
       volume: `${fb.vol}`,
       timestamp: `${fb.timestamp}`,
-      icon: <FacebookIcon/>,
+      icon: metaLogo,
     },
   ];
 

@@ -1,8 +1,9 @@
 import React from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
+import { Card, CardContent } from "../ui/card";
+
 
 interface props {
-  stockIcon: React.ReactElement;
+  stockIcon: string,
   name: string;
   price: string;
   volume: string;
@@ -12,18 +13,18 @@ interface props {
 const TradeCard: React.FC<props> = ({ stockIcon, name, price, volume, timestamp }) => {
   return (
     <Card className="col-span-1 h-28 bg-slate-800">
-      <CardContent className="p-6">
+      <CardContent className="p-4">
         <div className="flex items-center justify-between gap-2 mb-3">
           <div className="flex items-center">            
-            <div className="text-white me-3">
-                {stockIcon}
+            <div className="bg-white me-3 p-2 rounded-full">
+                <img src= {stockIcon} alt = {name} width={30}/>
             </div>
-            <span className="text-white">{name}</span>
+            <span className="text-white font-bold">{name}</span>
           </div>
-          <div className="text-lg text-green-500 font-bold">{price}</div>
+          <div className="text-lg text-white font-bold">{price}</div>
         </div>
         <div className="flex justify-between items-center text-sm text-white">
-          <span><b>Vol:</b> {volume}</span>
+          <span><b>Volume:</b> {volume}</span>
           <span>{timestamp}</span>
         </div>
       </CardContent>
