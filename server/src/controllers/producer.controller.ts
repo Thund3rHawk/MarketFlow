@@ -13,7 +13,7 @@ export async function producer (){
   // Create a producer for the specified topic
   const producer = await fluvio.topicProducer(topicName);
 
-  const socket = new WebSocket(`wss://ws.finnhub.io?token=${process.env.FINNHUB_API_KEY_2}`);
+  const socket = new WebSocket(`wss://ws.finnhub.io?token=${process.env.FINNHUB_API_KEY}`);
 
   socket.addEventListener('open', function (event) {
     console.log('WebSocket connection opened.');
@@ -21,8 +21,8 @@ export async function producer (){
     socket.send(JSON.stringify({'type': 'subscribe', "symbol":"BINANCE:BTCUSDT"}));
     socket.send(JSON.stringify({'type': 'subscribe', 'symbol': 'AMZN'}));
     socket.send(JSON.stringify({'type': 'subscribe', 'symbol': 'GOOG'}));
-    socket.send(JSON.stringify({'type': 'subscribe', 'symbol': 'MFST'}));
-    socket.send(JSON.stringify({'type': 'subscribe', 'symbol': 'FB'}));
+    socket.send(JSON.stringify({'type': 'subscribe', 'symbol': 'MSFT'}));
+    socket.send(JSON.stringify({'type': 'subscribe', 'symbol': 'META'}));
   });
 
   // Listen for messages from WebSocket
