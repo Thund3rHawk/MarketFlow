@@ -1,7 +1,8 @@
 import express from 'express'
+import { consumer } from '../controllers/consumer.controller';
 
 const router = express.Router();
 
-// have to add routes here
+router.route('/stream').get(consumer)
 
 export default router;

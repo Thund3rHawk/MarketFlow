@@ -1,11 +1,11 @@
-import Graph from "./components/Graph"
+import Dashboard from "./components/Dashboard"
 
 function App() {
 
   return (
-    <>
-      <Graph/>
-    </>
+    <div className="bg-black">
+      <Dashboard/>
+    </div>
   )
 }
 
