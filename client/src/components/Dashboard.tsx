@@ -1,8 +1,4 @@
 import TradeCard from "./shared/TradeCard";
-import AppleIcon from '@mui/icons-material/Apple';
-import GoogleIcon from '@mui/icons-material/Google';
-import MicrosoftIcon from '@mui/icons-material/Microsoft';
-import FacebookIcon from '@mui/icons-material/Facebook';
 import { useEffect, useState } from "react";
 import appleLogo from '../assets/apple.png'
 import microsoftLogo from '../assets/microsoft.png'

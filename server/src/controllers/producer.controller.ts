@@ -5,7 +5,6 @@ import Fluvio from '@fluvio/client';
 export async function producer (){
   // Fluvio topic name
   const topicName = "message";
-  // const  = 'websocket-topic';
 
   // Connect to Fluvio
   const fluvio = await Fluvio.connect();
