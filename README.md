@@ -2,6 +2,10 @@
 
 **MarketFlow** is a real-time trade price dashboard that visualizes stock trade prices using a React frontend, Node.js backend with Express, WebSocket integration with Finnhub API, and Fluvio for data streaming.
 
+## Demo Video
+
+https://github.com/user-attachments/assets/e16a1462-0b7e-4331-89ac-4a5751f537cb
+
 
 ## Project Structure
 
@@ -97,8 +101,5 @@ yarn dev
 
 Open your web browser and go to `http://localhost:5173` to access the real-time trade price dashboard.
 
-
-## Screenshot
-<img width="1706" alt="Screenshot 2024-08-22 at 2 00 28 PM" src="https://github.com/user-attachments/assets/ff37f6b4-35dd-41d8-9e7a-1e6712b16538">
 
 ---
